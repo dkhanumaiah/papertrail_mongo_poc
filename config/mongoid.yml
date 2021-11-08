@@ -1,0 +1,15 @@
+defaults: &defaults
+  allow_dynamic_fields: true
+  parameterize_keys: true
+  persist_in_safe_mode: true
+  raise_not_found_error: true
+  reconnect_time: 3
+  use_object_ids: false
+  dynamic_attributes: true
+  allow_dynamic_attributes: true
+  database: my_paper_db
+  hosts: mongodb://localhost:27017
+
+development:
+  clients:
+    default: *defaults

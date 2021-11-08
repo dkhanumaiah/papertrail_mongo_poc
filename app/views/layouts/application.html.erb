@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PaperTrailMongoPOC</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%# TODO Add a simple navigation %>
+    <nav>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Deleted Articles", deleted_articles_path %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

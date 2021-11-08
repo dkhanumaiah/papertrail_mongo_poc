@@ -1,0 +1,25 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: paper_trail
+  username: postgres
+  password: aknamed
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: paper_trail
+
+
+production:
+  <<: *default
+  database: paper_trail
+  username: paper_trail
+  password: <%= ENV['PAPER_TRAIL_DATABASE_PASSWORD'] %>
